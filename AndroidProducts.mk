@@ -14,4 +14,5 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := $(LOCAL_PATH)/twrp_m10lte.mk
+PRODUCT_MAKEFILES := \
+     $(LOCAL_DIR)/twrp_m10lte.mk
