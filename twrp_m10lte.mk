@@ -14,18 +14,13 @@
 # limitations under the License.
 #
 
-PRODUCT_RELEASE_NAME := m10lte
-
-$(call inherit-product, build/target/product/embedded.mk)
+# Inherit from m10lte device
+$(call inherit-product, device/samsung/m10lte/device.mk)
 
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/twrp/config/common.mk)
 
-PRODUCT_PACKAGES += \
-	charger_res_images \
-	charger
-
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/prebuilt/dt.img:boot.img
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 PRODUCT_DEVICE := m10lte
 PRODUCT_NAME := twrp_m10lte
