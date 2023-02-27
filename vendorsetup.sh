@@ -1,1 +1,1 @@
-add_lunch_combo omni_m10lte-eng
+add_lunch_combo twrp_m10lte-eng

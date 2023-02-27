@@ -17,4 +17,4 @@
 LOCAL_PATH := device/samsung/m10lte/
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
-PRODUCT_MAKEFILES := $(LOCAL_PATH)/omni_m10lte.mk
+PRODUCT_MAKEFILES := $(LOCAL_PATH)/twrp_m10lte.mk
