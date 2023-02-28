@@ -5,6 +5,5 @@ ro.product.brand=samsung
 ro.product.name=m10lte
 ro.product.device=m10lte
 ro.build.product=m10lte
-ro.treble.enabled=true
 persist.sys.usb.config=mtp
 sys.usb.controller=13600000.dwc3
