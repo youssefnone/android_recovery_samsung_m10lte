@@ -20,7 +20,7 @@ $(call inherit-product, device/samsung/m10lte/device.mk)
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/twrp/config/common.mk)
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
 PRODUCT_DEVICE := m10lte
 PRODUCT_NAME := twrp_m10lte
