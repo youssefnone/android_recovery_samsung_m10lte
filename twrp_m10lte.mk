@@ -20,6 +20,8 @@ $(call inherit-product, device/samsung/m10lte/device.mk)
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/twrp/config/common.mk)
 
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
 PRODUCT_DEVICE := m10lte
@@ -27,4 +29,3 @@ PRODUCT_NAME := twrp_m10lte
 PRODUCT_MODEL := Samsung Galaxy M10
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
-

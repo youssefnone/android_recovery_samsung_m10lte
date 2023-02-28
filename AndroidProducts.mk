@@ -16,3 +16,6 @@
 
 PRODUCT_MAKEFILES := \
      $(LOCAL_DIR)/twrp_m10lte.mk
+
+COMMON_LUNCH_CHOICES := \
+    twrp_m10lte-eng
