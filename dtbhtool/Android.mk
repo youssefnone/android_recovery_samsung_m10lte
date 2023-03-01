@@ -6,7 +6,7 @@ LOCAL_SRC_FILES := dtbimg.c
 LOCAL_STATIC_LIBRARIES := libfdt
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/libdtbimg
 LOCAL_MODULE := libdtbimg
-include $(BUILD_HOST_STATIC_LIBRARY)
+include $(BUILD_*)
 
 include $(CLEAR_VARS)
 
