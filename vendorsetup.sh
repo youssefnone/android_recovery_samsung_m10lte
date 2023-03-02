@@ -44,13 +44,12 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_RECOVERY_BOOT_PARTITION="/dev/block/platform/13540000.dwmmc0/by-name/BOOT"
 	export OF_FLASHLIGHT_ENABLE="1"
 	export OF_FL_PATH1="/system/flashlight"
-	export OF_DEVICE_WITHOUT_PERSIST=1
 	export OF_SKIP_FBE_DECRYPTION=1
 	export OF_VANILLA_BUILD="1"
 	export FOX_USE_LZMA_COMPRESSION="1"
 	
 	# Screen Settings
-	export OF_SCREEN_H=2340
+	export OF_SCREEN_H=1520
 	export OF_STATUS_H=81
 	export OF_STATUS_INDENT_LEFT=55 # m20lte Specific
 	export OF_STATUS_INDENT_RIGHT=55 # m20lte Specific
@@ -86,9 +85,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	# Run Post Format Process for MTP
 	export OF_RUN_POST_FORMAT_PROCESS=1
 	
-	# Create Odin Flashable .tar files
-	export OF_NO_SAMSUNG_SPECIAL=0
-
 	# Magisk
 	function download_magisk(){
 		# Usage: download_magisk <destination_path>
