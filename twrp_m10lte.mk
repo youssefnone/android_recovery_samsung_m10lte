@@ -19,8 +19,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/prebuilt/dt.img:boot.img
-
 PRODUCT_DEVICE := m10lte
 PRODUCT_NAME := twrp_m10lte
 PRODUCT_MODEL := Samsung Galaxy M10
