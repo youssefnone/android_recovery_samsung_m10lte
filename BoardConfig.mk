@@ -49,12 +49,16 @@ TW_INCLUDE_CRYPTO_FBE := true
 TW_INCLUDE_FBE := true
 
 # Kernel
-# kernel and bootimg
-BOARD_CUSTOM_BOOTIMG := true
-BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/dtbhtool/mkbootimg.mk
+TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_HEADER_ARCH := arm64
+TARGET_KERNEL_CONFIG := exynos7870-m10lte_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/exynos7870
+
+# Extracted with libbootimg
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --dt $(OUT_DIR)/target/product/m10lte/obj/KERNEL_OBJ/arch/$(TARGET_ARCH)/boot/dtb.img
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
+BOARD_KERNEL_IMAGE_NAME := Image dtb.img
 
 # File systems
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -72,7 +76,7 @@ TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
 AB_OTA_UPDATER := false
 
 # TWRP specific build flags
-TARGET_OTA_ASSERT_DEVICE := m10lte, m10f, m10ltedx
+TARGET_OTA_ASSERT_DEVICE := m10lte, m10f
 RECOVERY_SDCARD_ON_DATA := true
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
 TW_EXCLUDE_DEFAULT_USB_INIT := true

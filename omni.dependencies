@@ -1,2 +1,8 @@
 [
+	{
+		"remote":"github",
+		"repository":"youssefnone/recovery_kernel_samsung_m10lte",
+		"target_path":"kernel/samsung/exynos7870",
+		"revision":"main"
+	}
 ]
